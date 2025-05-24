@@ -1,0 +1,78 @@
+
+import java.util.Scanner;
+public class BankCalc {
+    public static void main(String[] args) {
+   
+   
+    Scanner input=new Scanner(System.in);
+    System.out.println("What is your Balance in saving ");
+    double h= input.nextDouble();
+    System.out.println("What is your Balance in your checkings account");
+    double q=input.nextDouble();
+    
+    System.out.println("1 Do you want to deposit or  2 do you want to withdraw, 3 what is my total interest");
+    int I= input.nextInt();
+    
+    if(I==1){
+        System.out.println("Do you want to deposit in your savings or checking, 7 for saving 8 for checking");
+        int k=input.nextInt();
+        if (k==7) {
+        	System.out.println("How much do you want to deposit");
+        	Double dep=input.nextDouble();
+        	h=h+dep;
+        	System.out.println(" Your final value is "+ h);
+        	
+        }
+        
+        if (k==8) {
+        	System.out.println("How much do you want to deposit");
+        	Double dep2=input.nextDouble();
+        	q=q+dep2;
+        	System.out.println(" Your final value in checkings account is  "+ h);
+        }
+    
+        System.out.println("The final savings balance is "+ h +" And the final checkings value is "+ q);
+    
+    
+    }
+        
+    else  if (I==2) {
+    	  System.out.println("Do you want to withdraw from your savings or checking account , 4 for saving 5 for checking");
+    	  int m=input.nextInt();
+    	  if (m==4) {
+    		  System.out.println("How much do you want to withdraw");
+    		  Double qm=input.nextDouble();
+    		  h=h-qm;
+    		  System.out.println(h);
+    	  }
+    	  else if(m==5) {
+    		  System.out.println("HOw much do you want to with draw from checking");
+    		  Double qr=input.nextDouble();
+    		  q=q-qr;
+    		  System.out.println(q);
+    	  }
+      }
+    
+    
+    else if (I==3) {
+    	System.out.println("Do you want to calculate interest from your savings or checking account , 4 for saving 5 for checking");
+    	int me=input.nextInt();
+    	if (me==4) {
+   		  System.out.println("How much do you want to withdraw");
+   		  Double qg=input.nextDouble();
+   		  h=h+((qg/100)*h);
+   		  System.out.println(h);
+   	  }
+   	  else if(me==5) {
+   		  System.out.println("What is the interest on the checkings account.");
+   		  Double qr=input.nextDouble();
+   		  q=q+((qr/100)*q);
+   		  System.out.println(q);
+        
+    }
+
+
+    }
+    }
+}
+
